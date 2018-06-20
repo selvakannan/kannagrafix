@@ -13,7 +13,7 @@ Begin VB.Form Main_Form
    ScaleHeight     =   8325
    ScaleWidth      =   14415
    StartUpPosition =   2  'CenterScreen
-   Begin Desktop_Email_Client.jcbutton jcbutton1 
+   Begin kannagrafix.jcbutton jcbutton1 
       Height          =   615
       Left            =   11040
       TabIndex        =   31
@@ -21,9 +21,8 @@ Begin VB.Form Main_Form
       Width           =   1815
       _ExtentX        =   3201
       _ExtentY        =   1085
-      ButtonStyle     =   2
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Tahoma"
+         Name            =   "MS Sans Serif"
          Size            =   8.25
          Charset         =   0
          Weight          =   400
@@ -31,11 +30,8 @@ Begin VB.Form Main_Form
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      BackColor       =   15199212
-      PictureEffectOnOver=   0
-      PictureEffectOnDown=   0
+      Caption         =   "jcbutton"
       CaptionEffects  =   0
-      TooltipBackColor=   0
    End
    Begin VB.Timer Timer1 
       Enabled         =   0   'False
@@ -143,57 +139,66 @@ Begin VB.Form Main_Form
       Visible         =   0   'False
       Width           =   11415
    End
-   Begin Desktop_Email_Client.jcbutton CommandButton3 
+   Begin kannagrafix.jcbutton CommandButton3 
       Height          =   375
       Left            =   6720
       TabIndex        =   2
       Top             =   4080
       Width           =   1215
-      _extentx        =   2143
-      _extenty        =   661
-      buttonstyle     =   2
-      font            =   "Main_Form.frx":0005
-      backcolor       =   15199212
-      caption         =   "Delete"
-      pictureeffectonover=   0
-      pictureeffectondown=   0
-      captioneffects  =   0
-      tooltipbackcolor=   0
+      _ExtentX        =   2143
+      _ExtentY        =   661
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Caption         =   "jcbutton"
+      CaptionEffects  =   0
    End
-   Begin Desktop_Email_Client.jcbutton CommandButton2 
+   Begin kannagrafix.jcbutton CommandButton2 
       Height          =   375
       Left            =   6720
       TabIndex        =   1
       Top             =   3720
       Width           =   1215
-      _extentx        =   2143
-      _extenty        =   661
-      buttonstyle     =   2
-      font            =   "Main_Form.frx":002D
-      backcolor       =   15199212
-      caption         =   "Attach Files"
-      pictureeffectonover=   0
-      pictureeffectondown=   0
-      captioneffects  =   0
-      tooltipbackcolor=   0
+      _ExtentX        =   2143
+      _ExtentY        =   661
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Caption         =   "jcbutton"
+      CaptionEffects  =   0
    End
-   Begin Desktop_Email_Client.jcbutton CommandButton1 
+   Begin kannagrafix.jcbutton CommandButton1 
       Height          =   615
       Left            =   8400
       TabIndex        =   0
       Top             =   3960
       Visible         =   0   'False
       Width           =   2175
-      _extentx        =   3836
-      _extenty        =   1085
-      buttonstyle     =   2
-      font            =   "Main_Form.frx":0055
-      backcolor       =   15199212
-      caption         =   "Send Email"
-      pictureeffectonover=   0
-      pictureeffectondown=   0
-      captioneffects  =   0
-      tooltipbackcolor=   0
+      _ExtentX        =   3836
+      _ExtentY        =   1085
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Caption         =   "jcbutton"
+      CaptionEffects  =   0
    End
    Begin MSComDlg.CommonDialog CommonDialog1 
       Left            =   240
@@ -202,14 +207,14 @@ Begin VB.Form Main_Form
       _ExtentY        =   847
       _Version        =   393216
    End
-   Begin Desktop_Email_Client.XP_ProgressBar XP_ProgressBar1 
+   Begin kannagrafix.XP_ProgressBar XP_ProgressBar1 
       Height          =   375
       Left            =   8520
       TabIndex        =   30
       Top             =   4800
       Width           =   5535
-      _extentx        =   9763
-      _extenty        =   661
+      _ExtentX        =   9763
+      _ExtentY        =   661
    End
    Begin VB.Label Label14 
       Caption         =   "Red colored are important."
@@ -414,11 +419,7 @@ Private Sub Command2_Click()
 End Sub
 
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-'On some requests when same project uploaded on PSC with  '
-'the name of 'Urdu Desktop (SMTP) Email Client for Gmail' '
-'Some users required to get the english version of the    '
-'same project then it is converted by me to english &     '
-'being uploaded on Planet Source Code.                    '
+'       '
 'There is a desktop email client to send email using gmail'
 'address. No need to go on Gmail's website & login to send'
 'emails. Simply put you Gmail address & Password & send   '
@@ -435,9 +436,9 @@ End Sub
 '                                                         '
 ' Waiting for your Feedbacks.Thank You.                   '
 '                                                         '
-'                                                         '
-'                 Muhammad Mehmood Iqbal                  '
-'                   ME_IQ_TM@yahoo.com                    '
+'                selvaraj kannan m.sc (it)                                        '
+'                 kannagrafix                '
+'                   art4artist.com                    '
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Private Sub CommandButton1_Click()

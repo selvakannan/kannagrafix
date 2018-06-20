@@ -59,7 +59,7 @@ Begin VB.MDIForm FormMain
       TabStop         =   0   'False
       Top             =   0
       Width           =   7755
-      Begin Desktop_Email_Client.jcbutton cmdOpen 
+      Begin kannagrafix.jcbutton cmdOpen 
          Height          =   615
          Left            =   120
          TabIndex        =   7
@@ -67,9 +67,8 @@ Begin VB.MDIForm FormMain
          Width           =   1935
          _ExtentX        =   3413
          _ExtentY        =   1085
-         ButtonStyle     =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Tahoma"
+            Name            =   "MS Sans Serif"
             Size            =   8.25
             Charset         =   0
             Weight          =   400
@@ -77,14 +76,10 @@ Begin VB.MDIForm FormMain
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         BackColor       =   15199212
          Caption         =   "contributors"
-         PictureEffectOnOver=   0
-         PictureEffectOnDown=   0
          CaptionEffects  =   0
-         TooltipBackColor=   0
       End
-      Begin Desktop_Email_Client.jcbutton cmdSave 
+      Begin kannagrafix.jcbutton cmdSave 
          Height          =   495
          Left            =   120
          TabIndex        =   6
@@ -92,9 +87,8 @@ Begin VB.MDIForm FormMain
          Width           =   2055
          _ExtentX        =   3625
          _ExtentY        =   873
-         ButtonStyle     =   2
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Tahoma"
+            Name            =   "MS Sans Serif"
             Size            =   8.25
             Charset         =   0
             Weight          =   400
@@ -102,12 +96,8 @@ Begin VB.MDIForm FormMain
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
-         BackColor       =   15199212
          Caption         =   "updates"
-         PictureEffectOnOver=   0
-         PictureEffectOnDown=   0
          CaptionEffects  =   0
-         TooltipBackColor=   0
       End
       Begin VB.PictureBox picLogo 
          Appearance      =   0  'Flat
@@ -243,13 +233,13 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 
 'ShellExecute is preferable to VB's 'Shell' command; I use it for two items in the "Help" menu - sending
-' me an email, and opening the PhotoDemon website (currently just tannerhelland.com)
+' me an email, and opening the kannagrafix website (currently just art4artist.com)
 Private Declare Function ShellExecute Lib "shell32" Alias "ShellExecuteA" (ByVal HWnd As Long, ByVal lpOperation As String, ByVal lpFile As String, ByVal lpParameters As String, ByVal lpDirectory As String, ByVal nShowCmd As Long) As Long
 Private Const SW_SHOWNORMAL = 1
 
 Private Sub cmdOpen_Click()
    
-    'Before we can display the "About" form, we need to paint the PhotoDemon logo to it.
+    'Before we can display the "About" form, we need to paint the kannagrafix logo to it.
     Dim logoWidth As Long, logoHeight As Long
     Dim logoAspectRatio As Double
     
@@ -274,66 +264,52 @@ Private Sub cmdSave_Click()
   'GitHub requires a login for submitting Issues; check for that first
     Dim msgReturn As VbMsgBoxResult
     
-    msgReturn = MsgBox("Thank you for submitting a bug report.  To make sure your bug is addressed as quickly as possible, PhotoDemon needs to know where to send it." & vbCrLf & vbCrLf & "Do you have a GitHub account? (If you have no idea what this means, answer ""No"".)", vbQuestion + vbApplicationModal + vbYesNo, "Thanks for making " & PROGRAMNAME & " better")
+    msgReturn = MsgBox("Thank you for submitting a bug report.  To make sure your bug is addressed as quickly as possible, kannagrafix needs to know where to send it." & vbCrLf & vbCrLf & "Do you have a GitHub account? (If you have no idea what this means, answer ""No"".)", vbQuestion + vbApplicationModal + vbYesNo, "Thanks for making " & PROGRAMNAME & " better")
     
     'If they have a GitHub account, let them submit the bug there.  Otherwise, send them to the tannerhelland.com contact form
     If msgReturn = vbYes Then
         'Shell a browser window with the GitHub issue report form
-        ShellExecute FormMain.HWnd, "Open", "https://github.com/tannerhelland/PhotoDemon/issues/new", "", 0, SW_SHOWNORMAL
+        ShellExecute FormMain.HWnd, "Open", "https://github.com/selvakannan/kannagrafix/tree/master", "", 0, SW_SHOWNORMAL
     Else
-        'Shell a browser window with the tannerhelland.com PhotoDemon contact form
-        ShellExecute FormMain.HWnd, "Open", "http://www.tannerhelland.com/photodemon-contact/", "", 0, SW_SHOWNORMAL
+        'Shell a browser window with the tannerhelland.com kannagrafix contact form
+        ShellExecute FormMain.HWnd, "Open", "https://github.com/selvakannan/kannagrafix/tree/master", "", 0, SW_SHOWNORMAL
     End If
 
 End Sub
 
 
-
-
-Private Sub cmdUndo_Click()
-
-End Sub
-
-Private Sub jcbutton1_Click()
-
-End Sub
-
-Private Sub MnuAbout_Click()
-    
-  '
-End Sub
 Private Sub MnuBugReport_Click()
     
     'GitHub requires a login for submitting Issues; check for that first
     Dim msgReturn As VbMsgBoxResult
     
-    msgReturn = MsgBox("Thank you for submitting a bug report.  To make sure your bug is addressed as quickly as possible, PhotoDemon needs to know where to send it." & vbCrLf & vbCrLf & "Do you have a GitHub account? (If you have no idea what this means, answer ""No"".)", vbQuestion + vbApplicationModal + vbYesNo, "Thanks for making " & PROGRAMNAME & " better")
+    msgReturn = MsgBox("Thank you for submitting a bug report.  To make sure your bug is addressed as quickly as possible, kannagrafix needs to know where to send it." & vbCrLf & vbCrLf & "Do you have a GitHub account? (If you have no idea what this means, answer ""No"".)", vbQuestion + vbApplicationModal + vbYesNo, "Thanks for making " & PROGRAMNAME & " better")
     
     'If they have a GitHub account, let them submit the bug there.  Otherwise, send them to the tannerhelland.com contact form
     If msgReturn = vbYes Then
         'Shell a browser window with the GitHub issue report form
-        ShellExecute FormMain.HWnd, "Open", "https://github.com/tannerhelland/PhotoDemon/issues/new", "", 0, SW_SHOWNORMAL
+        ShellExecute FormMain.HWnd, "Open", "https://github.com/selvakannan/kannagrafix/tree/master", "", 0, SW_SHOWNORMAL
     Else
-        'Shell a browser window with the tannerhelland.com PhotoDemon contact form
-        ShellExecute FormMain.HWnd, "Open", "http://www.tannerhelland.com/photodemon-contact/", "", 0, SW_SHOWNORMAL
+        'Shell a browser window with the tannerhelland.com kannagrafix contact form
+        ShellExecute FormMain.HWnd, "Open", "https://github.com/selvakannan/kannagrafix/tree/master", "", 0, SW_SHOWNORMAL
     End If
 
 End Sub
 Private Sub MnuEmailAuthor_Click()
     
     'Shell a browser window with the tannerhelland.com contact form
-    ShellExecute FormMain.HWnd, "Open", "http://www.tannerhelland.com/photodemon-contact/", "", 0, SW_SHOWNORMAL
+        ShellExecute FormMain.HWnd, "Open", "https://github.com/selvakannan/kannagrafix/tree/master", "", 0, SW_SHOWNORMAL
 
 End Sub
 Private Sub MnuVisitWebsite_Click()
-    'Nothing special here - just launch the default web browser with PhotoDemon's page on tannerhelland.com
-    ShellExecute FormMain.HWnd, "Open", "http://www.tannerhelland.com/photodemon", "", 0, SW_SHOWNORMAL
+    'Nothing special here - just launch the default web browser with kannagrafix's page on tannerhelland.com
+        ShellExecute FormMain.HWnd, "Open", "https://github.com/selvakannan/kannagrafix/tree/master", "", 0, SW_SHOWNORMAL
 End Sub
 
 
 Private Sub MnuDonate_Click()
     'Launch the default web browser with the tannerhelland.com donation page
-    ShellExecute FormMain.HWnd, "Open", "http://www.tannerhelland.com/donate", "", 0, SW_SHOWNORMAL
+        ShellExecute FormMain.HWnd, "Open", "https://github.com/selvakannan/kannagrafix/tree/master", "", 0, SW_SHOWNORMAL
 End Sub
 
 

@@ -3,7 +3,7 @@ Begin VB.Form FormAbout
    AutoRedraw      =   -1  'True
    BackColor       =   &H00FFFFFF&
    BorderStyle     =   4  'Fixed ToolWindow
-   Caption         =   " About PhotoDemon"
+   Caption         =   " About kannagrafix"
    ClientHeight    =   8115
    ClientLeft      =   2340
    ClientTop       =   1875
@@ -49,7 +49,7 @@ Begin VB.Form FormAbout
       AutoSize        =   -1  'True
       BackColor       =   &H80000005&
       BackStyle       =   0  'Transparent
-      Caption         =   "PhotoDemon would not be possible without the following individuals. My sincerest thanks goes out to: "
+      Caption         =   "kannagrafix would not be possible without the following individuals. My sincerest thanks goes out to: "
       ForeColor       =   &H00400000&
       Height          =   195
       Index           =   0
@@ -57,7 +57,7 @@ Begin VB.Form FormAbout
       MousePointer    =   99  'Custom
       TabIndex        =   3
       Top             =   2880
-      Width           =   7335
+      Width           =   7275
    End
    Begin VB.Label lblDisclaimer 
       Alignment       =   1  'Right Justify
@@ -108,7 +108,7 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 '***************************************************************************
 'About Form
-'Copyright ©2000-2012 by Tanner Helland
+'Copyright ©2000-2012 by kannagrafix
 'Created: 6/12/01
 'Last updated: 04/September/12
 'Last update: updated list to reflect recent changes to the codebase.
@@ -119,7 +119,7 @@ Attribute VB_Exposed = False
 
 Option Explicit
 'ShellExecute is preferable to VB's 'Shell' command; I use it for two items in the "Help" menu - sending
-' me an email, and opening the PhotoDemon website (currently just tannerhelland.com)
+' me an email, and opening the kannagrafix website (currently just tannerhelland.com)
 Private Declare Function ShellExecute Lib "shell32" Alias "ShellExecuteA" (ByVal HWnd As Long, ByVal lpOperation As String, ByVal lpFile As String, ByVal lpParameters As String, ByVal lpDirectory As String, ByVal nShowCmd As Long) As Long
 Private Const SW_SHOWNORMAL = 1
 
@@ -140,33 +140,35 @@ Private Sub Form_Load()
     curCredit = 1
     
     'Shout-outs to other designers, programmers, testers and sponsors who provided various resources
-    Create_Http_link "Kroc of camendesign.com (UI design and organization)", "http://camendesign.com"
-    Create_Http_link "Ron van Tilburg (implementation of Xiaolin Wu line antialiasing)", "http://www.planet-source-code.com/vb/scripts/showcode.asp?txtCodeId=71370&lngWid=1"
-    Create_Http_link "Jason Bullen (knot-based cubic spline interpolation)", "http://www.planetsourcecode.com/vb/scripts/ShowCode.asp?txtCodeId=11488&lngWId=1"
-    Create_Http_link "Waty Thierry (printer interfacing in VB)", "http://www.ppreview.net/"
-    Create_Http_link "Dosadi (EZTW32 scanner/digital camera library)", "http://eztwain.com/eztwain1.htm"
-    Create_Http_link "Carles P.V., Avery, Dana Seaman (GDI+ references)", "http://www.planetsourcecode.com/vb/scripts/ShowCode.asp?txtCodeId=42376&lngWId=1"
-    Create_Http_link "Brad Martinez (VB binary file extraction)", "http://btmtz.mvps.org/gfxfromfrx/"
-    Create_Http_link "Paul Turcksin (dynamic MDI child icons)", "http://www.planetsourcecode.com/vb/scripts/ShowCode.asp?txtCodeId=60600&lngWId=1"
-    Create_Http_link "LaVolpe (automated VB6 Manifest Creator tool)", "http://www.vbforums.com/showthread.php?t=606736"
-    Create_Http_link "Leandro Ascierto (embedding PNGs as menu icons)", "http://leandroascierto.com/blog/clsmenuimage/"
-    Create_Http_link "Mark James (Silk icon set, CC-BY-2.5)", "http://www.famfamfam.com/lab/icons/silk/"
-    Create_Http_link "Floris van de Berg, Hervé Drolon, Carsten Klein (FreeImage library, GPLv2)", "http://freeimage.sourceforge.net/"
-    Create_Http_link "Jean-Loup Gailly, Mark Adler, Gilles Vollant (zLib library and wrapper)", "http://www.winimage.com/zLibDll/index.html"
-    Create_Http_link "Manuel Augusto Santos ('Enhanced 2-bit Color Reduction', 'Artistic Contour')", "http://www.planetsourcecode.com/vb/scripts/ShowCode.asp?txtCodeId=26303&lngWId=1"
-    Create_Http_link "Juned Chhipa ('jcButton 1.7' customizable command button replacement control)", "http://www.planet-source-code.com/vb/scripts/ShowCode.asp?txtCodeId=71482&lngWId=1"
-    Create_Http_link "Steve McMahon (CommonDialog interface, accelerator key handler, progress bar)", "http://www.vbaccelerator.com/home/VB/index.asp"
-    Create_Http_link "chrfb of deviantart.com (PhotoDemon's icon, 'Ecqlipse 2', CC-BY-NC-SA-3.0)", "http://chrfb.deviantart.com/art/quot-ecqlipse-2-quot-PNG-59941546"
-    Create_Http_link "Everaldo and The Crystal Project (Crystal icons, LGPL-licensed, click for details)", "http://www.everaldo.com/crystal/"
-    Create_Http_link "Yusuke Kamiyamane (Fugue icon set, CC-BY-3.0)", "http://p.yusukekamiyamane.com/"
-    Create_Http_link "The Tango Icon Library (public-domain)", "http://tango.freedesktop.org/"
-    Create_Http_link "Johannes B ('Fog')", "http://www.planetsourcecode.com/vb/scripts/ShowCode.asp?txtCodeId=42642&lngWId=1"
-    Create_Http_link "Planet Source Code", "http://www.planetsourcecode.com/"
-    Create_Http_link "Dave Jamison", "http://www.modeltrainsoftware.com/"
-    Create_Http_link "Herman Liu"
-    Create_Http_link "Robert Rayment"
-    Create_Http_link "Alfred Hellmueller"
-    
+    Create_Http_link "Kroc of camendesign.com (UI design and organization)", "http://art4artist.com"
+    Create_Http_link "Kroc of camendesign.com (UI design and organization)", "http://art4artist.com"
+    Create_Http_link "Kroc of camendesign.com (UI design and organization)", "http://art4artist.com"
+    Create_Http_link "Kroc of camendesign.com (UI design and organization)", "http://art4artist.com"
+    Create_Http_link "selvaraj kannan"
+    Create_Http_link "ponni kannan"
+    Create_Http_link "santhish kannan"
+     Create_Http_link "Kroc of camendesign.com (UI design and organization)", "http://art4artist.com"
+    Create_Http_link "Kroc of camendesign.com (UI design and organization)", "http://art4artist.com"
+    Create_Http_link "Kroc of camendesign.com (UI design and organization)", "http://art4artist.com"
+    Create_Http_link "Kroc of camendesign.com (UI design and organization)", "http://art4artist.com"
+    Create_Http_link "selvaraj kannan"
+    Create_Http_link "ponni kannan"
+    Create_Http_link "santhish kannan"
+      'Shout-outs to other designers, programmers, testers and sponsors who provided various resources
+    Create_Http_link "Kroc of camendesign.com (UI design and organization)", "http://art4artist.com"
+    Create_Http_link "Kroc of camendesign.com (UI design and organization)", "http://art4artist.com"
+    Create_Http_link "Kroc of camendesign.com (UI design and organization)", "http://art4artist.com"
+    Create_Http_link "Kroc of camendesign.com (UI design and organization)", "http://art4artist.com"
+    Create_Http_link "selvaraj kannan"
+    Create_Http_link "ponni kannan"
+    Create_Http_link "santhish kannan"
+     Create_Http_link "Kroc of camendesign.com (UI design and organization)", "http://art4artist.com"
+    Create_Http_link "Kroc of camendesign.com (UI design and organization)", "http://art4artist.com"
+    Create_Http_link "Kroc of camendesign.com (UI design and organization)", "http://art4artist.com"
+    Create_Http_link "Kroc of camendesign.com (UI design and organization)", "http://art4artist.com"
+    Create_Http_link "selvaraj kannan"
+    Create_Http_link "ponni kannan"
+    Create_Http_link "santhish kannan"
     
     lblThanks(0).MousePointer = vbDefault
     
