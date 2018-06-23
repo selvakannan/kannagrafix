@@ -1,0 +1,33 @@
+ip address connectivity
+
+ip address pc ; 157.51.175.1
+
+in cpanel ...remote mysql...add host  157.51.175.1
+   
+this ip is not a local host ip ( not working within  local lan server connectivity)
+----------------------------------------------------
+
+local host ip;wifi mode;in pc ; 192.168.43.155
+
+make sure above number;  go to ..contrlpanel...network and internet...network and sharing center....change adapter settings...wirelesss network connection ....status....details....ipv4 ; 192.168.43.155 (hp laptop)  192.168.43.37 dell laptop.
+xampp apache always on both pc.
+.....
+(or when usb mode )
+
+;;;settings...local area  connection 2....status....details....ipv4 ; 192.168.42.138  hp laptop
+
+we can use this ip number to open xampp/htdocs/ folder..within this server area.
+
+default local host ip;in pc; 127.0.0.1
+
+remote database server ip;for art4artist.com ; from vb6 or xampp ; is 103.21.59.28
+
+we can connect more computers local host folder using localhost ip addresses when wifi connectivity mode.
+
+lenova phone ip ;10.48.216.198
+
+we can send ip address links via sms. not whatsapp
+
+xammpp  ...phpmyadmin...database server 2...username  art4arti_kguser...password...karur1234...it will open  cpanel's phpmyadmin window  showing with art4arti_kg database only.
+
+
