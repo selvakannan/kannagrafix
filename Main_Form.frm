@@ -30,7 +30,7 @@ Begin VB.Form Main_Form
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Caption         =   "jcbutton"
+      Caption         =   "RETURN"
       CaptionEffects  =   0
    End
    Begin VB.Timer Timer1 
@@ -156,7 +156,7 @@ Begin VB.Form Main_Form
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Caption         =   "jcbutton"
+      Caption         =   "REMOVE"
       CaptionEffects  =   0
    End
    Begin kannagrafix.jcbutton CommandButton2 
@@ -176,7 +176,7 @@ Begin VB.Form Main_Form
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Caption         =   "jcbutton"
+      Caption         =   "ATTACH"
       CaptionEffects  =   0
    End
    Begin kannagrafix.jcbutton CommandButton1 
@@ -197,7 +197,7 @@ Begin VB.Form Main_Form
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Caption         =   "jcbutton"
+      Caption         =   "SEND MAIL"
       CaptionEffects  =   0
    End
    Begin MSComDlg.CommonDialog CommonDialog1 
@@ -466,18 +466,18 @@ Private Sub CommandButton2_Click()
   ' Display the Open dialog box
   CommonDialog1.ShowOpen
   
-  If CommonDialog1.CancelError = True Or CommonDialog1.FileName = "" Then
+  If CommonDialog1.CancelError = True Or CommonDialog1.fileName = "" Then
   GoTo Exit_Sub
   Else
   
   'Count attached file show them
-  ListBox1.AddItem CommonDialog1.FileName
+  ListBox1.AddItem CommonDialog1.fileName
   Label9.Caption = Main_Form.ListBox1.ListCount & " File (s) attached at this time."
   
   'Enable delete button
   CommandButton3.Enabled = True
   
-  CommonDialog1.FileName = ""
+  CommonDialog1.fileName = ""
   
   End If
    
