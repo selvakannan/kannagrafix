@@ -1215,6 +1215,12 @@ Dim Path As String
  
 End Sub
 
+Private Sub MDIForm_Unload(Cancel As Integer)
+Unload MenuFrm
+Unload MainFrm
+
+End Sub
+
 Private Sub MnuBugReport_Click()
     
     'GitHub requires a login for submitting Issues; check for that first

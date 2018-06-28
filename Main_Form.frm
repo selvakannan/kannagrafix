@@ -57,9 +57,9 @@ Begin VB.Form Main_Form
    End
    Begin VB.ListBox ListBox1 
       Height          =   1230
-      Left            =   360
+      Left            =   2160
       TabIndex        =   13
-      Top             =   4680
+      Top             =   5640
       Width           =   6855
    End
    Begin VB.TextBox TextBox1 
@@ -458,7 +458,7 @@ Private Sub CommandButton2_Click()
   CommonDialog1.Flags = cdlOFNFileMustExist + cdlOFNHideReadOnly
   
   ' Set filters
-  CommonDialog1.Filter = "All Files (*.*)"
+  CommonDialog1.filter = "All Files (*.*)"
   
   ' Specify default filter
   CommonDialog1.FilterIndex = 1
@@ -466,18 +466,18 @@ Private Sub CommandButton2_Click()
   ' Display the Open dialog box
   CommonDialog1.ShowOpen
   
-  If CommonDialog1.CancelError = True Or CommonDialog1.fileName = "" Then
+  If CommonDialog1.CancelError = True Or CommonDialog1.FileName = "" Then
   GoTo Exit_Sub
   Else
   
   'Count attached file show them
-  ListBox1.AddItem CommonDialog1.fileName
+  ListBox1.AddItem CommonDialog1.FileName
   Label9.Caption = Main_Form.ListBox1.ListCount & " File (s) attached at this time."
   
   'Enable delete button
   CommandButton3.Enabled = True
   
-  CommonDialog1.fileName = ""
+  CommonDialog1.FileName = ""
   
   End If
    
