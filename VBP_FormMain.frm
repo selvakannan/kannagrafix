@@ -21,7 +21,7 @@ Begin VB.MDIForm FormMain
       ScaleHeight     =   663
       ScaleMode       =   3  'Pixel
       ScaleWidth      =   491
-      TabIndex        =   32
+      TabIndex        =   31
       Top             =   0
       Width           =   7365
       Begin VB.ListBox lstFiles 
@@ -39,7 +39,7 @@ Begin VB.MDIForm FormMain
          ItemData        =   "VBP_FormMain.frx":0000
          Left            =   240
          List            =   "VBP_FormMain.frx":0002
-         TabIndex        =   36
+         TabIndex        =   35
          Top             =   240
          Visible         =   0   'False
          Width           =   5895
@@ -48,7 +48,7 @@ Begin VB.MDIForm FormMain
          Height          =   2040
          Left            =   360
          Pattern         =   "*.exe"
-         TabIndex        =   34
+         TabIndex        =   33
          Top             =   240
          Visible         =   0   'False
          Width           =   1575
@@ -57,7 +57,7 @@ Begin VB.MDIForm FormMain
          Height          =   2040
          Left            =   360
          Pattern         =   "*.exe"
-         TabIndex        =   33
+         TabIndex        =   32
          Top             =   2280
          Visible         =   0   'False
          Width           =   1575
@@ -110,18 +110,60 @@ Begin VB.MDIForm FormMain
       TabStop         =   0   'False
       Top             =   0
       Width           =   8355
+      Begin VB.TextBox Text1 
+         Height          =   3015
+         Left            =   1680
+         TabIndex        =   43
+         Text            =   "Text1"
+         Top             =   5760
+         Width           =   5415
+      End
+      Begin VB.CommandButton Command2 
+         Caption         =   "Command2"
+         Height          =   495
+         Left            =   1920
+         TabIndex        =   41
+         Top             =   1080
+         Width           =   735
+      End
+      Begin kannagrafix.jcbutton jcbutton1 
+         Height          =   495
+         Left            =   600
+         TabIndex        =   40
+         Top             =   720
+         Width           =   495
+         _ExtentX        =   873
+         _ExtentY        =   873
+         ButtonStyle     =   2
+         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+            Name            =   "Tahoma"
+            Size            =   8.25
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         BackColor       =   15199212
+         Caption         =   ""
+         PictureNormal   =   "VBP_FormMain.frx":0004
+         PictureEffectOnOver=   0
+         PictureEffectOnDown=   0
+         CaptionEffects  =   0
+         TooltipBackColor=   0
+      End
       Begin VB.CommandButton Command1 
          Caption         =   "Command1"
          Height          =   495
          Left            =   2880
-         TabIndex        =   37
+         TabIndex        =   36
          Top             =   3240
          Width           =   495
       End
       Begin VB.DirListBox Dir1 
          Height          =   315
          Left            =   120
-         TabIndex        =   35
+         TabIndex        =   34
          Top             =   5160
          Visible         =   0   'False
          Width           =   855
@@ -129,7 +171,7 @@ Begin VB.MDIForm FormMain
       Begin kannagrafix.jcbutton jcbutton12 
          Height          =   375
          Left            =   4560
-         TabIndex        =   31
+         TabIndex        =   30
          Top             =   1080
          Width           =   1575
          _ExtentX        =   2778
@@ -146,31 +188,6 @@ Begin VB.MDIForm FormMain
          EndProperty
          BackColor       =   15199212
          Caption         =   "icon editor"
-         PictureEffectOnOver=   0
-         PictureEffectOnDown=   0
-         CaptionEffects  =   0
-         TooltipBackColor=   0
-      End
-      Begin kannagrafix.jcbutton jcbutton8 
-         Height          =   375
-         Left            =   4560
-         TabIndex        =   26
-         Top             =   360
-         Width           =   1215
-         _ExtentX        =   2143
-         _ExtentY        =   661
-         ButtonStyle     =   2
-         BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-            Name            =   "Tahoma"
-            Size            =   8.25
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
-         BackColor       =   15199212
-         Caption         =   "FASTSTONE"
          PictureEffectOnOver=   0
          PictureEffectOnDown=   0
          CaptionEffects  =   0
@@ -453,9 +470,9 @@ Begin VB.MDIForm FormMain
       End
       Begin kannagrafix.jcbutton jcbutton18 
          Height          =   495
-         Left            =   840
+         Left            =   120
          TabIndex        =   14
-         Top             =   3120
+         Top             =   720
          Width           =   495
          _ExtentX        =   873
          _ExtentY        =   873
@@ -471,7 +488,7 @@ Begin VB.MDIForm FormMain
          EndProperty
          BackColor       =   15199212
          Caption         =   ""
-         PictureNormal   =   "VBP_FormMain.frx":0004
+         PictureNormal   =   "VBP_FormMain.frx":015E
          PictureEffectOnOver=   0
          PictureEffectOnDown=   0
          CaptionEffects  =   0
@@ -602,7 +619,7 @@ Begin VB.MDIForm FormMain
          EndProperty
          BackColor       =   15199212
          Caption         =   ""
-         PictureNormal   =   "VBP_FormMain.frx":021E
+         PictureNormal   =   "VBP_FormMain.frx":0378
          PictureEffectOnOver=   0
          PictureEffectOnDown=   0
          CaptionEffects  =   0
@@ -629,7 +646,7 @@ Begin VB.MDIForm FormMain
          EndProperty
          BackColor       =   15199212
          Caption         =   ""
-         PictureNormal   =   "VBP_FormMain.frx":12F8
+         PictureNormal   =   "VBP_FormMain.frx":1452
          PictureEffectOnOver=   0
          PictureEffectOnDown=   0
          PicturePushOnHover=   -1  'True
@@ -657,7 +674,7 @@ Begin VB.MDIForm FormMain
          EndProperty
          BackColor       =   15199212
          Caption         =   ""
-         PictureNormal   =   "VBP_FormMain.frx":23D2
+         PictureNormal   =   "VBP_FormMain.frx":252C
          PictureEffectOnOver=   0
          PictureEffectOnDown=   0
          CaptionEffects  =   0
@@ -742,7 +759,7 @@ Begin VB.MDIForm FormMain
       Begin kannagrafix.jcbutton jcbutton10 
          Height          =   375
          Left            =   2040
-         TabIndex        =   30
+         TabIndex        =   29
          Top             =   1800
          Width           =   1095
          _ExtentX        =   1931
@@ -764,11 +781,43 @@ Begin VB.MDIForm FormMain
          CaptionEffects  =   0
          TooltipBackColor=   0
       End
+      Begin VB.Label Label7 
+         Caption         =   "computer name;"
+         Height          =   255
+         Left            =   240
+         TabIndex        =   42
+         Top             =   5760
+         Width           =   1215
+      End
+      Begin VB.Label Label6 
+         Caption         =   "WEB SITE DESIGNING FOR CART  SHOPS, PAYMENT GATEWAY SETTINGS"
+         Height          =   2415
+         Left            =   1320
+         TabIndex        =   39
+         Top             =   4920
+         Width           =   5895
+      End
+      Begin VB.Label Label5 
+         Caption         =   "MARKET PLACE FOR ORIGINAL ARTWORKS"
+         Height          =   495
+         Left            =   2400
+         TabIndex        =   38
+         Top             =   4440
+         Width           =   5295
+      End
+      Begin VB.Label Label4 
+         Caption         =   "Agency for MAXICAB RE-SALES"
+         Height          =   375
+         Left            =   2520
+         TabIndex        =   37
+         Top             =   3960
+         Width           =   5295
+      End
       Begin VB.Label Label3 
          Caption         =   "OFFLINE;"
          Height          =   375
          Left            =   5040
-         TabIndex        =   29
+         TabIndex        =   28
          Top             =   120
          Width           =   1695
       End
@@ -776,7 +825,7 @@ Begin VB.MDIForm FormMain
          Caption         =   "XAMPP;"
          Height          =   375
          Left            =   120
-         TabIndex        =   28
+         TabIndex        =   27
          Top             =   1560
          Width           =   1695
       End
@@ -784,7 +833,7 @@ Begin VB.MDIForm FormMain
          Caption         =   "ONLINE;"
          Height          =   375
          Left            =   120
-         TabIndex        =   27
+         TabIndex        =   26
          Top             =   120
          Width           =   1695
       End
@@ -846,11 +895,53 @@ Begin VB.MDIForm FormMain
    End
    Begin VB.Menu mnuwinapps 
       Caption         =   "&win Apps"
+      Begin VB.Menu mnuresmon 
+         Caption         =   "Resource Moniter"
+      End
       Begin VB.Menu mnunote 
          Caption         =   "notepad"
       End
+      Begin VB.Menu mnuodbc 
+         Caption         =   "ODBC Connectivity"
+      End
+      Begin VB.Menu mnuinternetoptions 
+         Caption         =   "internet options"
+      End
+      Begin VB.Menu mnucalc 
+         Caption         =   "calculator"
+      End
+      Begin VB.Menu mnucharmap 
+         Caption         =   "charmap"
+      End
+      Begin VB.Menu mnuremote 
+         Caption         =   "Remote Desktop connection"
+      End
+      Begin VB.Menu mnusqlnet 
+         Caption         =   "SQL Server Client Network Utility"
+      End
+      Begin VB.Menu mnufire 
+         Caption         =   "Windows Firewall"
+      End
+      Begin VB.Menu mnusysconfig 
+         Caption         =   "System information"
+      End
+      Begin VB.Menu mnunetwork 
+         Caption         =   "Network Connections"
+      End
+      Begin VB.Menu mnudevice 
+         Caption         =   "Device Manager"
+      End
       Begin VB.Menu mnudownloads 
          Caption         =   "downloads"
+      End
+   End
+   Begin VB.Menu mnugra 
+      Caption         =   "Graphics Editors"
+      Begin VB.Menu mnupscs2 
+         Caption         =   "Photoshop cs2"
+      End
+      Begin VB.Menu mnufast 
+         Caption         =   "faststone"
       End
    End
    Begin VB.Menu MnuHelp 
@@ -874,7 +965,7 @@ Begin VB.MDIForm FormMain
          Caption         =   "Submit Bug Report..."
       End
       Begin VB.Menu MnuHelpSepBar1 
-         Caption         =   "-"
+         Caption         =   "about system"
       End
       Begin VB.Menu MnuAbout 
          Caption         =   "&About PhotoDemon"
@@ -898,7 +989,7 @@ Private dblWordID As Double
 ''# preparation (in a separate module)
 
 ''# use (anywhere)
-
+'rundll32 Shell32.dll,Control_RunDLL INETCPL.CPL
 Private Sub cmdRedo_Click()
 
 End Sub
@@ -927,16 +1018,21 @@ MsgBox Dir1
 End Sub
 
 Private Sub filter1_Click(Index As Integer)
-Dim Path As String
+Dim path As String
     
-    Path = App.Path
+    path = App.path
     
-    If Right(Path, 1) <> "\" Then Path = Path & "\"
-    Path = Path & "filters\"
+    If Right(path, 1) <> "\" Then path = path & "\"
+    path = path & "filters\"
     
     'filter(Index).Tag = Path
    'MsgBox Path & filter1(Index).Tag
-        dblWordID = Shell(Path & filter1(Index).Tag, vbNormalFocus)
+        dblWordID = Shell(path & filter1(Index).Tag, vbNormalFocus)
+End Sub
+
+Private Sub jcbutton1_Click()
+        ShellExecute FormMain.HWnd, "Open", "https://mail.google.com/mail/u/0/?tab=wm", "", 0, SW_SHOWNORMAL
+
 End Sub
 
 Private Sub jcbutton10_Click()
@@ -953,29 +1049,15 @@ End Sub
 
 Private Sub jcbutton12_Click()
 
-        ShellExecute FormMain.HWnd, "Open", "TinyGFX32.exe", "", 0, SW_SHOWNORMAL
+        ShellExecute FormMain.HWnd, "Open", "Filters\TinyGFX32.exe", "", 0, SW_SHOWNORMAL
 
 End Sub
 
-Private Sub jcbutton14_Click()
 
-End Sub
-
-Private Sub jcbutton15_Click()
-
-End Sub
-
-Private Sub jcbutton16_Click()
-
-End Sub
-
-Private Sub jcbutton17_Click()
-
-End Sub
 
 Private Sub jcbutton18_Click()
 '"C:\Program Files\Everything\Everything.exe"
- dblWordID = Shell("C:\Program Files\Everything\Everything.exe", vbNormalFocus)
+ dblWordID = Shell(GetSystemDrive & "\Program Files\Everything\Everything.exe", vbNormalFocus)
      'AppActivate dblWordID
 
 End Sub
@@ -987,7 +1069,6 @@ Private Sub jcbutton19_Click()
 End Sub
 
 Private Sub jcbutton2_Click()
- 
 End Sub
 
 Private Sub jcbutton20_Click()
@@ -1006,7 +1087,7 @@ Private Sub jcbutton22_Click()
 End Sub
 
 Private Sub jcbutton23_Click()
- dblWordID = Shell("C:\Program Files (x86)\DirLister\DirLister.exe", vbNormalFocus)
+ dblWordID = Shell(GetSystemDrive & "\Program Files (x86)\DirLister\DirLister.exe", vbNormalFocus)
 
 'C:\Program Files (x86)\DirLister
 End Sub
@@ -1033,7 +1114,7 @@ Private Sub jcbutton27_Click()
 End Sub
 
 Private Sub jcbutton28_Click()
- dblWordID = Shell("C:\Program Files (x86)\FolderSize\FolderSize.exe", vbNormalFocus)
+ dblWordID = Shell(GetSystemDrive & "\Program Files (x86)\FolderSize\FolderSize.exe", vbNormalFocus)
 
 End Sub
 
@@ -1072,7 +1153,6 @@ End Sub
 
 Private Sub jcbutton8_Click()
 
-dblWordID = Shell("C:\Program Files (x86)\FastStone Image Viewer\FSViewer.exe", vbNormalFocus)
 End Sub
 
 Private Sub jcbutton9_Click(Index As Integer)
@@ -1091,7 +1171,7 @@ Case 3
 sAppName = "XAMPP Control Panel v3.2.2   [ Compiled: Nov 12th 2015 ]"
             
 
-sAppPath = "C:\xampp\xampp-control.exe"
+sAppPath = GetSystemDrive & "\xampp\xampp-control.exe"
   For x = 0 To Dir1.ListCount - 1
          lstFiles.AddItem Right(Dir1.List(x), Len(Dir1.List(x)) - 16)
     Next x
@@ -1102,7 +1182,7 @@ sAppPath = "C:\xampp\xampp-control.exe"
            lstFiles.Visible = True
 
     Else
-        dblWordID = Shell("C:\xampp\xampp-control.exe", vbNormalFocus)
+        dblWordID = Shell(GetSystemDrive & "\xampp\xampp-control.exe", vbNormalFocus)
        lstFiles.Visible = True
 
     End If
@@ -1117,7 +1197,7 @@ Case 5
 'http://localhost/phpmyadmin/server_databases.php
 Case 6
 
-ShellExecute Me.HWnd, "open", App.Path & "HELP SCS.htm", vbNullString, vbNullString, SW_SHOWNORMAL
+ShellExecute Me.HWnd, "open", App.path & "HELP SCS.htm", vbNullString, vbNullString, SW_SHOWNORMAL
 
         End Select
 End Sub
@@ -1131,7 +1211,7 @@ Dim X1 As String
 sAppName = "XAMPP Control Panel v3.2.2   [ Compiled: Nov 12th 2015 ]"
             
 
-sAppPath = "C:\xampp\xampp-control.exe"
+sAppPath = GetSystemDrive & "\xampp\xampp-control.exe"
 
  'check if application is running
     If IsTaskRunning(sAppName) Then
@@ -1140,7 +1220,7 @@ sAppPath = "C:\xampp\xampp-control.exe"
 
 
     Else
-        dblWordID = Shell("C:\xampp\xampp-control.exe", vbNormalFocus)
+        dblWordID = Shell(GetSystemDrive & "\xampp\xampp-control.exe", vbNormalFocus)
    ShellExecute FormMain.HWnd, "Open", "http://localhost/" & lstFiles.List(X1), "", 0, SW_SHOWNORMAL
 
     End If
@@ -1150,16 +1230,21 @@ sAppPath = "C:\xampp\xampp-control.exe"
 End Sub
 
 Private Sub MDIForm_Load()
- Dim Path As String
+ Dim path As String
     Dim i As Integer
     Dim Title As String
-    Dir1.Path = "c:\xampp\htdocs"
-    Path = App.Path
+    Dir1.path = GetSystemDrive & "\xampp\htdocs"
+    path = App.path
+       getip
+  Dim intInc As Integer
+    Dim strDisplay As String
     
-    If Right(Path, 1) <> "\" Then Path = Path & "\"
-    Path = Path & "filters\installers"
+  
+
+    If Right(path, 1) <> "\" Then path = path & "\"
+    path = path & "filters\installers"
     
-    FormMain.lstFilters.Path = Path
+    FormMain.lstFilters.path = path
     
     For i = 0 To FormMain.lstFilters.ListCount - 1
         If i <> 0 Then
@@ -1176,12 +1261,12 @@ Private Sub MDIForm_Load()
     Next i
 
  Dim Path1 As String
-    Path1 = App.Path
+    Path1 = App.path
     
     If Right(Path1, 1) <> "\" Then Path1 = Path1 & "\"
     Path1 = Path1 & "filters"
     
-    FormMain.lstFilters1.Path = Path1
+    FormMain.lstFilters1.path = Path1
     
     For i = 0 To FormMain.lstFilters1.ListCount - 1
         If i <> 0 Then
@@ -1200,16 +1285,16 @@ End Sub
 
 Private Sub Filter_Click(Index As Integer)
     
-Dim Path As String
+Dim path As String
     
-    Path = App.Path
+    path = App.path
     
-    If Right(Path, 1) <> "\" Then Path = Path & "\"
-    Path = Path & "filters\installers\"
+    If Right(path, 1) <> "\" Then path = path & "\"
+    path = path & "filters\installers\"
     
     'filter(Index).Tag = Path
     ' MsgBox
-              dblWordID = Shell(Path & filter(Index).Tag, vbNormalFocus)
+              dblWordID = Shell(path & filter(Index).Tag, vbNormalFocus)
 
 
  
@@ -1239,8 +1324,27 @@ Private Sub MnuBugReport_Click()
 
 End Sub
 
+Private Sub mnucalc_Click()
+dblWordID = Shell("calc", vbNormalFocus)
+
+End Sub
+
+Private Sub mnucomp_Click()
+
+End Sub
+
+Private Sub mnucharmap_Click()
+dblWordID = Shell("charmap", vbNormalFocus)
+
+End Sub
+
+Private Sub mnudevice_Click()
+dblWordID = Shell("rundll32 Shell32.dll,Control_RunDLL hdwwiz.cpl", vbNormalFocus)
+
+End Sub
+
 Private Sub mnudownloads_Click()
-ShellExecute Me.HWnd, "Explore", "C:\Users\user\Downloads", "", "C:\", 1
+ShellExecute Me.HWnd, "Explore", GetSystemDrive & "\Users\user\Downloads", "", GetSystemDrive & "\", 1
 
 End Sub
 
@@ -1248,6 +1352,38 @@ Private Sub MnuEmailAuthor_Click()
     
     'Shell a browser window with the tannerhelland.com contact form
         ShellExecute FormMain.HWnd, "Open", "https://github.com/selvakannan/kannagrafix/tree/master", "", 0, SW_SHOWNORMAL
+
+End Sub
+
+Private Sub mnufast_Click()
+dblWordID = Shell(GetSystemDrive & "\Program Files (x86)\FastStone Image Viewer\FSViewer.exe", vbNormalFocus)
+
+End Sub
+
+Private Sub mnufire_Click()
+dblWordID = Shell("rundll32 Shell32.dll,Control_RunDLL firewall.cpl", vbNormalFocus)
+
+End Sub
+
+Private Sub MnuHelpSepBar1_Click()
+    Dim intInc As Integer
+    Dim strDisplay As String
+
+  Text1 = ""
+    ' Here we start printing
+    For intInc = 1 To 35
+        strDisplay = strDisplay & Environ(intInc)
+        strDisplay = strDisplay & Space(5)
+    Next intInc
+    
+    Text1 = strDisplay
+End Sub
+
+Private Sub mnuinternetoptions_Click()
+'INETCPL.CPL
+'dblWordID = Shell("inetcpl.cpl", vbNormalFocus)
+'ShellExecute FormMain.HWnd, "Open", GetWinPath & "\system32\inetcpl.cpl", "", 0, SW_SHOWNORMAL
+dblWordID = Shell("rundll32 Shell32.dll,Control_RunDLL INETCPL.CPL", vbNormalFocus)
 
 End Sub
 
@@ -1276,8 +1412,18 @@ Main_Form.Show
 End Sub
 
 
+Private Sub mnunetwork_Click()
+dblWordID = Shell("rundll32 Shell32.dll,Control_RunDLL ncpa.cpl", vbNormalFocus)
+
+End Sub
+
 Private Sub mnunote_Click()
 dblWordID = Shell("notepad", vbNormalFocus)
+End Sub
+
+Private Sub mnuodbc_Click()
+ShellExecute FormMain.HWnd, "Open", GetWinPath & "\system32\odbcad32.exe", "", 0, SW_SHOWNORMAL
+
 End Sub
 
 Private Sub mnuopen_Click()
@@ -1289,24 +1435,55 @@ Private Sub mnuopen_Click()
 End Sub
 
 
+Private Sub mnupscs2_Click()
+dblWordID = Shell(GetSystemDrive & "\Program Files (x86)\Adobe\Adobe Photoshop CS2\Photoshop.exe", vbNormalFocus)
+'Shell "C:\Program Files\Adobe\Photoshop CS\Photoshop.exe"
+
+End Sub
+
+Private Sub mnuremote_Click()
+dblWordID = Shell("mstsc", vbNormalFocus)
+
+End Sub
+
 Private Sub mnuremotedata_Click()
 MainFrm.Show
 
 End Sub
 
+Private Sub mnuresmon_Click()
+dblWordID = Shell("resmon", vbNormalFocus)
+
+End Sub
+
+Private Sub mnuslide_Click()
+dblWordID = Shell("calc", vbNormalFocus)
+
+End Sub
+
+Private Sub mnusqlnet_Click()
+dblWordID = Shell("cliconfg", vbNormalFocus)
+
+End Sub
+
+Private Sub mnusysconfig_Click()
+dblWordID = Shell("msinfo32", vbNormalFocus)
+
+End Sub
+
 Private Sub mnuvb6_Click()
 'E:\kannagrafix-master\VB6
-              dblWordID = Shell(App.Path & "\VB6\setup.exe", vbNormalFocus)
-Dim Path As String
+              dblWordID = Shell(App.path & "\VB6\setup.exe", vbNormalFocus)
+Dim path As String
     
-    Path = App.Path
+    path = App.path
     
-    If Right(Path, 1) <> "\" Then Path = Path & "\"
-    Path = Path & "vb6\"
+    If Right(path, 1) <> "\" Then path = path & "\"
+    path = path & "vb6\"
     
     'filter(Index).Tag = Path
     ' MsgBox Path & "SETUP.EXE"
-              dblWordID = Shell(Path & "SETUP.EXE", vbNormalFocus)
+              dblWordID = Shell(path & "SETUP.EXE", vbNormalFocus)
 
 End Sub
 
@@ -1322,6 +1499,3 @@ Private Sub MnuDonate_Click()
 End Sub
 
 
-Private Sub Text1_Change()
-
-End Sub

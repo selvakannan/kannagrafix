@@ -1,8 +1,10 @@
 Attribute VB_Name = "Module2"
 Option Explicit
 
-
+Public Const MAX_PATH = 260
  'API's Function Declarations
+Private Declare Function GetComputerName Lib "kernel32" Alias "GetComputerNameA" (ByVal lpBuffer As String, nSize As Long) As Long
+Private Declare Function GetWindowsDirectory Lib "kernel32.dll" Alias "GetWindowsDirectoryA" (ByVal lpBuffer As String, ByVal nSize As Long) As Long
 
  Private Declare Function IsWindow Lib "user32" (ByVal HWnd As Long) As Long
 Private Declare Function InternetGetConnectedState _
@@ -205,4 +207,75 @@ Public Function GetNetConnectString() As String
         msg = "Not connected To the internet now."
     End If
     GetNetConnectString = msg
+End Function
+Public Function GetTheComputerName() As String
+
+    On Error GoTo ErrorHandler
+
+    Dim strComputerName As String ' Variable to return the path of computer name
+    
+    strComputerName = Space(250) ' Initilize the buffer to receive the string
+    GetComputerName strComputerName, Len(strComputerName)
+    strComputerName = Mid(Trim$(strComputerName), 1, Len(Trim$(strComputerName)) - 1)
+    GetTheComputerName = strComputerName
+
+    Exit Function
+ 
+ErrorHandler:
+    Err.Raise Err.Number, Err.Source & "/Utils.GetTheComputerName", Err.Description
+
+End Function
+
+' ================================================================================
+' Routine:              GetTheWindowsDirectory
+' Description:
+' Algorithm:
+' Parameters:           None
+' Returns:
+' ================================================================================
+Public Function GetTheWindowsDirectory() As String
+
+    On Error GoTo ErrorHandler
+    
+    Dim strWindowsDir As String        ' Variable to return the path of Windows Directory
+    Dim lngWindowsDirLength As Long    ' Variable to return the the lenght of the path
+    
+    strWindowsDir = Space(250)         ' Initilize the buffer to receive the string
+    lngWindowsDirLength = GetWindowsDirectory(strWindowsDir, 250) ' Read the path of the windows directory
+    strWindowsDir = Left(strWindowsDir, lngWindowsDirLength) ' Extract the windows path from the buffer
+    
+    GetTheWindowsDirectory = strWindowsDir
+
+    Exit Function
+ 
+ErrorHandler:
+    Err.Raise Err.Number, Err.Source & "/Utils.GetTheWindowsDirectory", Err.Description
+
+End Function
+Public Function GetSystemDrive() As String
+    GetSystemDrive = Space(1000)
+    Call GetWindowsDirectory(GetSystemDrive, Len(GetSystemDrive))
+    GetSystemDrive = Left$(GetSystemDrive, 2)
+End Function
+Public Function GetWinPath()
+Dim strFolder As String
+Dim lngResult As Long
+strFolder = String(MAX_PATH, 0)
+lngResult = GetWindowsDirectory(strFolder, MAX_PATH)
+If lngResult <> 0 Then
+    GetWinPath = Left(strFolder, InStr(strFolder, _
+    Chr(0)) - 1)
+Else
+    GetWinPath = ""
+End If
+End Function
+Public Function getip()
+Dim IPConfig As Variant
+Dim IPConfigSet As Object
+
+Set IPConfigSet = GetObject("winmgmts:{impersonationLevel=impersonate}").ExecQuery("SELECT IPAddress FROM Win32_NetworkAdapterConfiguration WHERE IPEnabled = TRUE")
+
+For Each IPConfig In IPConfigSet
+ If Not IsNull(IPConfig.IPAddress) Then FormMain.Text1 = GetTheComputerName & "ip;" & IPConfig.IPAddress(0)
+Next IPConfig
 End Function
